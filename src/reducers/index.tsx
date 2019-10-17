@@ -4,17 +4,25 @@ import { Action } from '../actions';
 export interface State {
     channel: string
     loading: boolean
-    json: Array<object>
+    json: Array<any>
 }
 
-const reducer = (state: State, action: Action): State => {
+const initialState: State = {
+    channel: 'espn',
+    loading: false,
+    json: []
+}
+
+const reducer = (state = initialState, action: Action): State => {
     switch(action.type) {
         case select_channel:
             return {...state, channel: action.channel};
         case get_news: 
             return {...state, json: action.json.articles, loading: false};
         case request_news: 
-            return {...state, loading: true}             
+            return {...state, loading: true}
+        default:
+            return state;        
     }
 };
 

@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import reducer from './reducers';
-import './css/styles.css';
+import './css/style.css';
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
+//const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk, logger)));
 
 ReactDOM.render(
     <Provider store={store}>

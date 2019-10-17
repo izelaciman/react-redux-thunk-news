@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {fetchData} from '../../actions';
 import { State } from '../../reducers';
 import NewsItem from './news-item';
+import {Dispatch} from 'redux';
+import { OwnProps } from '../channels/channel';
 
 interface StateProps{
     channel: string
@@ -42,9 +44,11 @@ class NewsList extends Component<any, Props> {
     }
 }
 
-const mapDispatchToProps: DispatchProps = {
-    getPosts: fetchData
-}
+function mapDispatchToProps(dispatch: Dispatch): object {
+    return {
+        getPosts: (channel: string) => dispatch(fetchData(channel))
+    }
+} 
 
 function mapStateToProps(state: State): StateProps {
     return {

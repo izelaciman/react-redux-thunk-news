@@ -5,7 +5,7 @@ import NewsList from './components/news/news-list';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="App container">
       <ChannelList/>
       <NewsList />
     </div>

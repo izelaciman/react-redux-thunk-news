@@ -1,7 +1,7 @@
 
 .container{
-    margin:30px auto;
-    padding:20px;
+    margin:10px auto;
+    padding:0 20px;
 
     border-radius:1rem;
 
@@ -67,20 +67,13 @@ a{
     clear: both;
 }
 
-.btn{
-    margin-bottom:20px;
-    font-size: 30px;
-}
-
-.btn-lg{
-    border-radius:25px;
-}
 
 .active{
     background-color:rgb(145, 96, 12);
 }
+
 img {
-    border: 3px solid rgb(32, 46, 5);
+    border: 1px solid rgb(32, 46, 5);
     display: block;
     margin: 0 auto 20px;
     max-width: 100%;

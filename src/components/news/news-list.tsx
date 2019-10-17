@@ -4,7 +4,6 @@ import {fetchData} from '../../actions';
 import { State } from '../../reducers';
 import NewsItem from './news-item';
 import {Dispatch} from 'redux';
-import { OwnProps } from '../channels/channel';
 
 interface StateProps{
     channel: string

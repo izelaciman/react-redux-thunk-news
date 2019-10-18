@@ -18,9 +18,7 @@
 .button:hover{
     transform: scale(1.05);
 }
-.button:active{
-    background-color:gray;
-}
+
 .button p{
     position: absolute;
     top:50%;
@@ -50,7 +48,7 @@ a{
 
 
 .active{
-    background-color:rgb(145, 96, 12);
+    background-color:#337ab7;
 }
 
 img {

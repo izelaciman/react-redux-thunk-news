@@ -4,7 +4,7 @@ import { selectChannel, fetchData } from '../../actions';
 import { State } from '../../reducers';
 import {Dispatch} from 'redux';
 
-export interface OwnProps {
+interface OwnProps {
     mode: string
     channelName: string,
     channelString: string
@@ -24,9 +24,7 @@ type Props = DispatchProps & OwnProps & StateProps;
 const Channel: React.FC<Props> = (props: Props) =>{
     return (
         <div  className="col-lg-2 col-md-4 col-sm-6">
-            <div className="button" onClick={props.onClick}
-                style={{ backgroundColor: props.active ===props.channelString ? 'orange' : '' }}
-            >
+            <div className={`button ${props.channelString === props.active ? "active" : ""}`} onClick={props.onClick} >
             <p>{props.channelName}</p>
             </div>
         </div>

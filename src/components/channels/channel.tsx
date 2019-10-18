@@ -3,18 +3,15 @@ import { connect } from 'react-redux';
 import { selectChannel, fetchData } from '../../actions';
 import { State } from '../../reducers';
 import { Dispatch } from 'redux';
-
 interface OwnProps {
     mode: string
     channelName: string,
     channelString: string
 }
-     
 interface DispatchProps {
     onSelect: () => void
     onClick: () => void
 }
-
 interface StateProps {
     active: string
 }
@@ -37,7 +34,6 @@ function mapStateToProps(state: State ,ownProps: OwnProps): StateProps {
     }
 }
 
-
 function mapDispatchToProps(dispatch: Dispatch, ownProps: OwnProps): DispatchProps {
     return {
         onSelect: () => {
@@ -46,7 +42,5 @@ function mapDispatchToProps(dispatch: Dispatch, ownProps: OwnProps): DispatchPro
         onClick: () => dispatch(fetchData(ownProps.channelString, ownProps.mode))
     }
 }
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Channel);

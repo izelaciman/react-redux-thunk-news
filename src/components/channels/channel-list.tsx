@@ -2,7 +2,6 @@ import React from 'react'
 import Channel from './channel'
 
 const ChannelsField: React.FC = () => (
-
   <div className="row" >
     <Channel mode="sources" channelName="BBC" channelString="bbc-news" />
     <Channel mode="sources" channelName="CNN" channelString="cnn" />

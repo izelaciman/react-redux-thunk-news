@@ -1,4 +1,4 @@
-import {select_channel,get_news, request_news, select_mode} from '../actions';
+import { select_channel,get_news, request_news, select_mode } from '../actions';
 import { Action } from '../actions';
 
 export interface State {

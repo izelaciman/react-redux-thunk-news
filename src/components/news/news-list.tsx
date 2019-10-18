@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {fetchData} from '../../actions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchData } from '../../actions';
 import { State } from '../../reducers';
 import NewsItem from './news-item';
-import {Dispatch} from 'redux';
+import { Dispatch } from 'redux';
 
 interface StateProps{
     channel: string;

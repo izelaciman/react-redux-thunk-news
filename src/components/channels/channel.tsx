@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { selectChannel, fetchData } from '../../actions';
 import { State } from '../../reducers';
-import {Dispatch} from 'redux';
+import { Dispatch } from 'redux';
 
 interface OwnProps {
     mode: string

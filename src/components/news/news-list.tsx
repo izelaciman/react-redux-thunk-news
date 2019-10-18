@@ -6,12 +6,12 @@ import NewsItem from './news-item';
 import {Dispatch} from 'redux';
 
 interface StateProps{
-    channel: string
-    data: Array<any>
-    loading: boolean
+    channel: string;
+    data: Array<any>;
+    loading: boolean;
 }
 interface DispatchProps{
-    getPosts: Function
+    getPosts: () => void;
 }
 
 type Props = StateProps & DispatchProps;

@@ -22,15 +22,15 @@ interface StateProps {
 type Props = DispatchProps & OwnProps & StateProps;
 
 const Channel: React.FC<Props> = (props: Props) =>{
-        return (
-            <div  className="col-lg-2 col-md-4 col-sm-6">
-                <div className="channel-button" onClick={props.onClick}
-                    style={{ backgroundColor: props.active ===props.channelString ? 'orange' : '' }}
-                >
-                <p>{props.channelName}</p>
-                </div>
+    return (
+        <div  className="col-lg-2 col-md-4 col-sm-6">
+            <div className="button" onClick={props.onClick}
+                style={{ backgroundColor: props.active ===props.channelString ? 'orange' : '' }}
+            >
+            <p>{props.channelName}</p>
             </div>
-        )
+        </div>
+    )
 }
 
 function mapStateToProps(state: State ,ownProps: OwnProps): StateProps {

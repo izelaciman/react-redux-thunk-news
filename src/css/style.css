@@ -2,24 +2,10 @@
 .container{
     margin:10px auto;
     padding:0 20px;
-
     border-radius:1rem;
-
 }
 
-.wrapper{
-    background-color: lightgreen;
-}
-
-.invisible{
-    display: none;
-}
-
-.disp-block{
-    display: block;
-}
-
-.channel-button{
+.button{
     background-color: rgb(0, 0, 0);
     position: relative;
     margin: 5px auto;
@@ -29,13 +15,13 @@
     cursor: pointer;
     color: #fff;
 }
-.channel-button:hover{
+.button:hover{
     transform: scale(1.05);
 }
-.channel-button:active{
+.button:active{
     background-color:gray;
 }
-.channel-button p{
+.button p{
     position: absolute;
     top:50%;
     left:50%;
@@ -44,16 +30,11 @@
     color: #fff;
 }
 
-.article-wrapper{
+.wrapper{
     padding: 20px;
     margin:15px;
     border-radius: 5px;
-    border:1px solid rgb(3, 53, 24);
-}
-
-article p{
-    margin :0 5%;
-    font-size: 15px;
+    border:1px solid #000
 }
 
 a{
@@ -61,7 +42,7 @@ a{
     float:  right;
 }
 
-.article-wrapper:after {
+.wrapper:after {
     content: '';
     display: block;
     clear: both;
@@ -73,7 +54,7 @@ a{
 }
 
 img {
-    border: 1px solid rgb(32, 46, 5);
+    border: 1px solid #000;
     display: block;
     margin: 0 auto 20px;
     max-width: 100%;

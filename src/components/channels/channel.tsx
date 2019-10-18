@@ -5,6 +5,7 @@ import { State } from '../../reducers';
 import {Dispatch} from 'redux';
 
 export interface OwnProps {
+    mode: string
     channelName: string,
     channelString: string
 }
@@ -42,9 +43,9 @@ function mapStateToProps(state: State ,ownProps: OwnProps): StateProps {
 function mapDispatchToProps(dispatch: Dispatch, ownProps: OwnProps): DispatchProps {
     return {
         onSelect: () => {
-            dispatch(selectChannel(ownProps.channelName))
+                dispatch(selectChannel(ownProps.channelName))  
         },
-        onClick: () => dispatch(fetchData(ownProps.channelString))
+        onClick: () => dispatch(fetchData(ownProps.channelString, ownProps.mode))
     }
 }
 

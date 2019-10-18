@@ -7,6 +7,7 @@ import {Dispatch} from 'redux';
 
 interface StateProps{
     channel: string;
+    mode: string;
     data: Array<any>;
     loading: boolean;
 }
@@ -18,7 +19,7 @@ type Props = StateProps & DispatchProps;
 
 class NewsList extends Component<any, Props> {
     componentDidMount() {
-        this.props.getPosts(this.props.channel);
+        this.props.getPosts(this.props.channel, this.props.mode);
     }
     render () {
         let topNews;
@@ -45,13 +46,14 @@ class NewsList extends Component<any, Props> {
 
 function mapDispatchToProps(dispatch: Dispatch): object {
     return {
-        getPosts: (channel: string) => dispatch(fetchData(channel))
+        getPosts: (channel: string, mode: string) => dispatch(fetchData(channel, mode))
     }
 } 
 
 function mapStateToProps(state: State): StateProps {
     return {
         channel: state.channel,
+        mode: state.mode,
         data: state.json,
         loading: state.loading
     }

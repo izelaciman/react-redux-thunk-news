@@ -4,17 +4,20 @@ import { fetchData } from '../../actions';
 import { State } from '../../reducers';
 import NewsItem from './news-item';
 import { Dispatch } from 'redux';
+
 interface StateProps{
     channel: string;
     mode: string;
     data: Array<any>;
     loading: boolean;
 }
+
 interface DispatchProps{
     getPosts: () => void;
 }
 
 type Props = StateProps & DispatchProps;
+
 class NewsList extends Component<any, Props> {
     componentDidMount() {
         this.props.getPosts(this.props.channel, this.props.mode);

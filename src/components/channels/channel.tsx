@@ -3,15 +3,18 @@ import { connect } from 'react-redux';
 import { selectChannel, fetchData } from '../../actions';
 import { State } from '../../reducers';
 import { Dispatch } from 'redux';
+
 interface OwnProps {
     mode: string
     channelName: string,
     channelString: string
 }
+
 interface DispatchProps {
     onSelect: () => void
     onClick: () => void
 }
+
 interface StateProps {
     active: string
 }

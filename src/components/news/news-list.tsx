@@ -45,19 +45,15 @@ class NewsList extends Component<any, Props> {
     }
 }
 
-function mapDispatchToProps(dispatch: Dispatch): object {
-    return {
-        getPosts: (channel: string, mode: string) => dispatch(fetchData(channel, mode))
-    }
-} 
+const mapDispatchToProps = (dispatch: Dispatch): object => ({
+    getPosts: (channel: string, mode: string) => dispatch(fetchData(channel, mode))   
+});
 
-function mapStateToProps(state: State): StateProps {
-    return {
-        channel: state.channel,
-        mode: state.mode,
-        data: state.json,
-        loading: state.loading
-    }
-}
+const mapStateToProps = (state: State): StateProps => ({
+    channel: state.channel,
+    mode: state.mode,
+    data: state.json,
+    loading: state.loading
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsList);

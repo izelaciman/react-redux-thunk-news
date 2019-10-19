@@ -9,15 +9,15 @@ interface Article {
     }
 }
 
-const NewsItem: React.FC<Article> = ({article}: Article) => {
-    return (<article>
+const NewsItem: React.FC<Article> = ({article}: Article) => (
+    <article>
         <div className="wrapper">
             <h3 className="text-center">{article.title}</h3>
             <img src={article.urlToImage} alt="" />
             <p className="text-center">{article.description}</p>
             <a href={article.url} target="_blank" rel="noopener noreferrer"> read more </a>
         </div>
-    </article>);
-};
+    </article>
+);
   
 export default NewsItem ;

@@ -21,29 +21,23 @@ interface StateProps {
 
 type Props = DispatchProps & OwnProps & StateProps;
 
-const Channel: React.FC<Props> = (props: Props) =>{
-    return (
+const Channel: React.FC<Props> = (props: Props) => (
         <div  className="col-lg-2 col-md-4 col-sm-6">
             <div className={`button ${props.channelString === props.active ? "active" : ""}`} onClick={props.onClick} >
             <p>{props.channelName}</p>
             </div>
         </div>
-    )
-}
+);
 
-function mapStateToProps(state: State ,ownProps: OwnProps): StateProps {
-    return {
+const mapStateToProps = (state: State ,ownProps: OwnProps): StateProps => ({
         active: state.channel
-    }
-}
+})
 
-function mapDispatchToProps(dispatch: Dispatch, ownProps: OwnProps): DispatchProps {
-    return {
+const mapDispatchToProps = (dispatch: Dispatch, ownProps: OwnProps): DispatchProps =>({
         onSelect: () => {
                 dispatch(selectChannel(ownProps.channelName))  
         },
         onClick: () => dispatch(fetchData(ownProps.channelString, ownProps.mode))
-    }
-}
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Channel);

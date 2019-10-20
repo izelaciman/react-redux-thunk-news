@@ -22,7 +22,7 @@ interface StateProps {
 type Props = DispatchProps & OwnProps & StateProps;
 
 const Channel: React.FC<Props> = (props: Props) => (
-        <div  className="col-lg-2 col-md-4 col-sm-6">
+        <div  className="col-lg-2 col-md-2 col-xs-4">
             <div className={`button ${props.channelString === props.active ? "active" : ""}`} onClick={props.onClick} >
             <p>{props.channelName}</p>
             </div>

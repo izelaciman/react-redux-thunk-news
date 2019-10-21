@@ -25,7 +25,7 @@ class NewsList extends Component<any, Props> {
     render () {
         let topNews;
 
-        if (this.props.data) {
+        if (this.props.data && this.props.data.length > 0) {
             topNews =this.props.data.map((article:any, index: number) =>
                 (
                     <div key={`${index}`} className="row">
@@ -33,6 +33,8 @@ class NewsList extends Component<any, Props> {
                     </div>
                 )
             )
+        } else {
+            topNews = <h3 className="loading-indicator">No news found...</h3>
         }
         if (this.props.loading) {
             topNews = <h3 className="loading-indicator">Loading ...</h3>

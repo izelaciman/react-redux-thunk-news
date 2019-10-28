@@ -5,7 +5,7 @@ export const get_news = 'GET_NEWS';
 export const request_news = 'REQUEST_NEWS';
 export const select_mode = 'SELECT_MODE'
 
-const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+const API_KEY = '734d806c946e48588029bc7011b0924b'
 
 export type data = {
     articles: Array<object>

@@ -38,6 +38,6 @@ const mapDispatchToProps = (dispatch: Dispatch, ownProps: OwnProps): DispatchPro
                 dispatch(selectChannel(ownProps.channelName))  
         },
         onClick: () => dispatch(fetchData(ownProps.channelString, ownProps.mode))
-});
+}); 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Channel);
